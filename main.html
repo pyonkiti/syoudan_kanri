@@ -1,0 +1,53 @@
+<!-- ActiveのCSVファイルを、楽楽販売の商談管理にインポートするための、CSV加工処理 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商談管理 CSVファイル作成</title>
+
+    <!-- 文字コードを変換するライブラリ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/encoding-japanese/1.0.30/encoding.min.js" 
+        integrity="sha512-rqL5c2sp6KdRdB27P16dSYF9J3/WrP+UHrKuzWiN6304wz0bzv1ZE8G+zieQGSnNfg9UasgKNOQzv4yir7+Prg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+    <script src="syodan.js"></script>
+    
+</head>
+<body>
+    
+    <u><h2>ActiveCSV変換ツール</h2></u>
+    <section>
+        <h4><ul>
+            <li>ActiveのCSVファイルを楽楽販売の商談管理にインポートするために、データ加工して出力するツールです</li>
+            <li>CSVファイルはUTF-8で読み込み、SJISにコード変換して出力します</li>
+        </ul></h4>
+    </section>
+    
+    <section>
+        変換前
+        <div>
+            <input type="file" id="file">
+            <div id="encoding"></div>
+            <textarea id="result" rows="8" cols="120"></textarea>
+        </div>
+
+        変換後
+        <div>
+            <input id="btn_convert" type="button" value="コンバート">
+            <br>
+            <textarea id="result_cnv" rows="8" cols="120"></textarea>
+            <font color="red"><div id="data_cnt">　</div></font>
+        </div>
+
+        <br>
+        <div>
+            <input id="btn_down" type="button" value="ダウンロード" >
+            <a hidden id="lnk" download="商談.csv">ダウンロード</a>
+        </div>
+    </section>
+
+</body>
+</html>
