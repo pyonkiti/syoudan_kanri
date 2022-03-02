@@ -1,4 +1,4 @@
-// ActiveのCSVファイルを、楽楽販売の商談管理にインポートするための、CSV加工処理
+// ActiveのCSVファイルを、楽楽販売の商談管理にインポートするためのCSV加工処理
 window.addEventListener('load', function() {
     
     // [ファイルを選択] FileAPIでファイルを読み込んで画面に表示
@@ -20,6 +20,11 @@ window.addEventListener('load', function() {
     // [ダウンロード] 画面に再表示されたコンバート結果を、テキストファイルでダウンロード
     document.getElementById('btn_down').addEventListener('click', function() {
         document.getElementById('lnk').click();
+    })
+
+    // [閉じる] ブラウザを終了
+    document.getElementById('btn_close').addEventListener('click', function() {
+        window.close();
     })
 }, false);
 
